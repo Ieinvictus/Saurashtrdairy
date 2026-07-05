@@ -357,9 +357,8 @@ body{
 
 .sd-slide picture img{
     width:100%;
-    height:100vh;
+    height:100%;
     object-fit:cover;
-    object-position:center;
 }
 
 .sd-wrapper{
@@ -416,9 +415,9 @@ body{
 
 .sd-slide picture img{
     width:100%;
-    height:100vh;
+    height:100%;
     object-fit:cover;
-    object-position:center;
+
 }
 
 .sd-content h1{
