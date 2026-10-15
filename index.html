@@ -199,6 +199,8 @@
     <link rel="stylesheet"
           href="https://saurashtradairy.com/assets/home/style.css">
 <link rel="stylesheet" href="https://saurashtradairy.com/assets/footer/style.css">
+
+  <link rel="stylesheet" href="https://saurashtradairy.com/assets/home/navbar/style.css">
   
 </head>
 
@@ -208,9 +210,14 @@
      NAVBAR
 ================================================== -->
 
+<!-- ==================================================
+     SAURASHTRA DAIRY — NAVBAR
+================================================== -->
+
 <header class="site-header" id="top">
 
-    <a href="#"
+    <!-- Logo -->
+    <a href="https://saurashtradairy.com/"
        class="brand"
        aria-label="Saurashtra Dairy Home">
 
@@ -219,32 +226,46 @@
             alt="Saurashtra Dairy — Pure Taste of Saurashtra"
             class="navbar-logo"
             width="170"
-            height="76"
+            height="100"
         >
 
     </a>
 
+    <!-- Mobile Menu Button -->
     <button
         class="menu-toggle"
         type="button"
-        aria-label="Open navigation"
+        aria-label="Toggle navigation"
         aria-expanded="false"
         aria-controls="mainNavigation">
-        ☰
+
+        <span></span>
+        <span></span>
+        <span></span>
+
     </button>
 
+    <!-- Navigation Links -->
     <nav class="main-nav"
          id="mainNavigation"
          aria-label="Main navigation">
 
-        <a href="#" class="active">Home</a>
+        <a href="https://saurashtradairy.com/"
+           class="active"
+           aria-current="page">
+            Home
+        </a>
 
-        <a href="#">Dairy Categories</a>
+        <a href="#categories">
+            Dairy Categories
+        </a>
 
-        <a href="#">Domain for Sale</a>
+        <a href="#domain-sale">
+            Domain for Sale
+        </a>
 
-        <a href="#" class="nav-cta">
-            Acquire the Domain <span>↗</span>
+        <a href="#inquiry" class="nav-cta">
+            Acquire the Domain <span aria-hidden="true">↗</span>
         </a>
 
     </nav>
