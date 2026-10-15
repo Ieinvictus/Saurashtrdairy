@@ -1,0 +1,615 @@
+/* =========================================================
+   SAURASHTRA DAIRY — PREMIUM CLASSIC HEADER
+   Responsive | Desktop | Tablet | Mobile
+   Active Page Gold Underline
+========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES
+========================================================= */
+
+:root {
+    --green: #173D2B;
+    --green-dark: #102B1F;
+    --green-deep: #0B2117;
+    --green-light: #28563D;
+
+    --cream: #F5F0E5;
+    --cream-light: #FBF9F3;
+    --cream-dark: #EAE2D1;
+
+    --gold: #C6A35B;
+    --gold-light: #E1C98E;
+    --gold-dark: #987538;
+
+    --white: #FFFFFF;
+    --black: #171B17;
+
+    --text: #454A43;
+    --text-light: #777D73;
+
+    --border: rgba(23, 61, 43, 0.13);
+    --border-light: rgba(255, 255, 255, 0.15);
+
+    --font-heading: "Playfair Display", Georgia, serif;
+    --font-body: "DM Sans", Arial, sans-serif;
+
+    --container: 1240px;
+
+    --radius-sm: 5px;
+    --radius-md: 12px;
+    --radius-lg: 22px;
+
+    --shadow-sm: 0 8px 24px rgba(16, 43, 31, 0.06);
+    --shadow-md: 0 18px 45px rgba(16, 43, 31, 0.10);
+    --shadow-lg: 0 28px 65px rgba(16, 43, 31, 0.16);
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   02. RESET & BASE
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 105px;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+
+    overflow-x: clip;
+
+    background: var(--cream-light);
+    color: var(--black);
+
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: var(--font-body);
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   03. HEADER
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    min-height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin: 0;
+    padding: 0 max(24px, calc((100% - var(--container)) / 2));
+
+    background: rgba(251, 249, 243, 0.97);
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: 0 3px 16px rgba(16, 43, 31, 0.025);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* =========================================================
+   04. BRAND / LOGO
+========================================================= */
+
+.site-header .brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex: 0 0 auto;
+
+    width: auto;
+    max-width: 220px;
+    min-width: 0;
+
+    line-height: 0;
+    text-decoration: none;
+}
+
+.site-header .navbar-logo {
+    display: block;
+
+    width: 170px;
+    height: 100px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+    object-position: left center;
+
+    flex-shrink: 0;
+
+    transition: opacity var(--transition);
+}
+
+.site-header .brand:hover .navbar-logo {
+    opacity: 0.88;
+}
+
+
+/* =========================================================
+   05. DESKTOP NAVIGATION
+========================================================= */
+
+.site-header .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: clamp(18px, 2.5vw, 35px);
+
+    min-width: 0;
+    margin-left: auto;
+}
+
+
+/* Navigation links */
+
+.site-header .main-nav > a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 44px;
+    padding: 12px 0;
+
+    color: var(--text);
+
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    line-height: 1.6;
+    white-space: nowrap;
+
+    transition: color var(--transition);
+}
+
+
+/* =========================================================
+   06. GOLD UNDERLINE
+   Hover + Active Page
+========================================================= */
+
+.site-header .main-nav > a:not(.nav-cta)::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+    transform-origin: left center;
+
+    transition: transform var(--transition);
+}
+
+
+/* Hover underline */
+
+.site-header .main-nav > a:not(.nav-cta):hover::after {
+    transform: scaleX(1);
+}
+
+
+/* Active page underline */
+
+.site-header .main-nav > a:not(.nav-cta).active::after,
+.site-header .main-nav > a:not(.nav-cta)[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+
+/* Active page text */
+
+.site-header .main-nav > a:not(.nav-cta).active,
+.site-header .main-nav > a:not(.nav-cta)[aria-current="page"] {
+    color: var(--green);
+}
+
+
+/* Hover text */
+
+.site-header .main-nav > a:not(.nav-cta):hover {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   07. NAVIGATION CTA
+========================================================= */
+
+.site-header .main-nav > a.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 44px;
+    padding: 12px 18px;
+
+    background: var(--green);
+    color: var(--white);
+
+    border: 1px solid var(--green);
+    border-radius: var(--radius-sm);
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+/* CTA arrow */
+
+.site-header .main-nav > a.nav-cta > span {
+    color: var(--gold-light);
+    font-size: 1rem;
+}
+
+
+/* CTA hover */
+
+.site-header .main-nav > a.nav-cta:hover {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+    color: var(--white);
+
+    transform: translateY(-2px);
+}
+
+
+/* CTA must not receive navigation underline */
+
+.site-header .main-nav > a.nav-cta::after {
+    display: none;
+}
+
+
+/* =========================================================
+   08. MOBILE MENU BUTTON
+========================================================= */
+
+.site-header .menu-toggle {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 5px;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 10px;
+
+    flex: 0 0 auto;
+
+    background: transparent;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+
+    color: var(--green);
+
+    cursor: pointer;
+}
+
+.site-header .menu-toggle span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background: var(--green);
+    border-radius: 2px;
+
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
+}
+
+
+/* Animated menu icon */
+
+.site-header .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.site-header .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.site-header .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   09. TABLET & MOBILE NAVIGATION
+   768px AND BELOW
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        min-height: 74px;
+
+        padding: 8px 24px;
+
+        gap: 18px;
+    }
+
+
+    /* Logo */
+
+    .site-header .brand {
+        max-width: 180px;
+    }
+
+    .site-header .navbar-logo {
+        width: 150px;
+        height: 90px;
+    }
+
+
+    /* Menu toggle */
+
+    .site-header .menu-toggle {
+        display: flex;
+    }
+
+
+    /* Closed menu */
+
+    .site-header .main-nav {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        width: 100%;
+        max-height: calc(100vh - 74px);
+
+        overflow-y: auto;
+
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+
+        gap: 0;
+
+        margin: 0;
+        padding: 12px 24px 22px;
+
+        background: var(--cream-light);
+
+        border-top: 1px solid var(--cream-dark);
+        border-bottom: 1px solid var(--border);
+
+        box-shadow: var(--shadow-md);
+    }
+
+
+    /* Open menu */
+
+    .site-header .main-nav.open {
+        display: flex;
+    }
+
+
+    /* Mobile navigation links */
+
+    .site-header .main-nav > a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+        min-height: 48px;
+
+        padding: 14px 8px;
+
+        white-space: normal;
+
+        border-bottom: 1px solid var(--cream-dark);
+
+        font-size: 0.84rem;
+    }
+
+
+    /* Mobile active underline */
+
+    .site-header .main-nav > a:not(.nav-cta)::after {
+        left: 8px;
+        bottom: 7px;
+
+        width: 38px;
+        height: 2px;
+    }
+
+
+    .site-header .main-nav > a:not(.nav-cta).active::after,
+    .site-header .main-nav > a:not(.nav-cta)[aria-current="page"]::after {
+        transform: scaleX(1);
+    }
+
+
+    /* Mobile CTA */
+
+    .site-header .main-nav > a.nav-cta {
+        justify-content: center;
+
+        margin-top: 14px;
+        padding: 14px 18px;
+
+        border: 1px solid var(--green);
+        border-radius: var(--radius-sm);
+    }
+
+}
+
+
+/* =========================================================
+   10. SMALL MOBILE
+   480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .site-header {
+        min-height: 66px;
+
+        padding: 7px 16px;
+
+        gap: 12px;
+    }
+
+
+    .site-header .brand {
+        max-width: 150px;
+    }
+
+
+    .site-header .navbar-logo {
+        width: 112px;
+        height: 80px;
+    }
+
+
+    .site-header .menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .site-header .main-nav {
+        max-height: calc(100dvh - 66px);
+
+        padding: 10px 16px 18px;
+    }
+
+
+    .site-header .main-nav > a {
+        min-height: 46px;
+
+        padding: 13px 8px;
+
+        font-size: 0.82rem;
+    }
+
+}
+
+
+/* =========================================================
+   11. EXTRA SMALL MOBILE
+   360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .site-header {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .site-header .navbar-logo {
+        width: 100px;
+        height: 80px;
+    }
+
+    .site-header .main-nav {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   12. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .site-header *,
+    .site-header *::before,
+    .site-header *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+
+  }
