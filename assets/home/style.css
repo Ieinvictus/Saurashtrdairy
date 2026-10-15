@@ -3379,7 +3379,20 @@ section {
     background: #C6A35B;
     color: #173D2B;
 }
+/* YouTube Hover */
+.footer-social-icon.youtube:hover {
+    background: #FF0000;
+    color: #000000;
+    border-color: #FF0000;
+}
 
+.footer-social-icon.youtube:hover svg {
+    color: #fff;
+}
+
+.footer-social-icon.youtube:hover svg path:last-child {
+    fill: #000000;
+}
 /* Tablet */
 @media (max-width: 768px) {
     .footer-social-vertical {
