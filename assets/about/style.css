@@ -1,0 +1,2843 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+/* =========================================================
+   02. RESET & BASE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+
+    background: #FBF9F3;
+    color: #102B1F;
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* =========================================================
+   SAURASHTRA DAIRY — ABOUT PAGE
+   Premium Editorial Design
+========================================================= */
+
+.sd-about-page {
+    --about-green: #173D2B;
+    --about-green-dark: #102B1F;
+    --about-green-deep: #0B2117;
+    --about-green-light: #28563D;
+
+    --about-cream: #F5F0E5;
+    --about-cream-light: #FBF9F3;
+    --about-cream-dark: #EAE2D1;
+
+    --about-gold: #C6A35B;
+    --about-gold-light: #E1C98E;
+    --about-gold-dark: #987538;
+
+    --about-text: #454A43;
+    --about-muted: #777D73;
+
+    --about-border: rgba(23, 61, 43, 0.14);
+
+    --about-heading: "Playfair Display", Georgia, serif;
+    --about-body: "DM Sans", Arial, sans-serif;
+
+    width: 100%;
+    overflow: clip;
+
+    background: var(--about-cream-light);
+    color: var(--about-green);
+
+    font-family: var(--about-body);
+    font-size: 15px;
+    line-height: 1.8;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.sd-about-page *,
+.sd-about-page *::before,
+.sd-about-page *::after {
+    box-sizing: border-box;
+}
+
+.sd-about-page h1,
+.sd-about-page h2,
+.sd-about-page h3,
+.sd-about-page p {
+    margin-top: 0;
+}
+
+.sd-about-page h1,
+.sd-about-page h2,
+.sd-about-page h3 {
+    font-family: var(--about-heading);
+    font-weight: 600;
+    line-height: 1.22;
+}
+
+.sd-about-page p {
+    font-family: var(--about-body);
+    overflow-wrap: anywhere;
+}
+
+.sd-about-page a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sd-about-page a:focus-visible {
+    outline: 2px solid var(--about-gold);
+    outline-offset: 5px;
+}
+
+.sd-section-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   01. SHARED ELEMENTS
+========================================================= */
+
+.sd-about-page .sd-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--about-gold-dark);
+
+    font-family: var(--about-body);
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2.2px;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+.sd-about-page .sd-eyebrow-light {
+    color: var(--about-gold-light);
+}
+
+.sd-about-page .sd-btn {
+    min-height: 52px;
+
+    padding: 14px 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    border: 1px solid transparent;
+
+    font-family: var(--about-body);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sd-about-page .sd-btn:hover {
+    transform: translateY(-3px);
+}
+
+.sd-about-page .sd-btn-primary {
+    background: var(--about-gold);
+    color: var(--about-green-deep);
+    border-color: var(--about-gold);
+}
+
+.sd-about-page .sd-btn-primary:hover {
+    background: var(--about-gold-light);
+    border-color: var(--about-gold-light);
+    box-shadow: 0 12px 30px rgba(198, 163, 91, 0.2);
+}
+
+.sd-about-page .sd-btn-outline {
+    background: transparent;
+    color: var(--about-cream);
+    border-color: rgba(245, 240, 229, 0.35);
+}
+
+.sd-about-page .sd-btn-outline:hover {
+    background: var(--about-cream);
+    color: var(--about-green);
+    border-color: var(--about-cream);
+}
+
+.sd-about-page .sd-btn-gold {
+    background: var(--about-gold-light);
+    color: var(--about-green-deep);
+    border-color: var(--about-gold-light);
+}
+
+.sd-about-page .sd-btn-gold:hover {
+    background: var(--about-cream-light);
+    border-color: var(--about-cream-light);
+}
+
+.sd-about-page .sd-btn-light-outline {
+    background: transparent;
+    color: var(--about-cream);
+    border-color: rgba(245, 240, 229, 0.35);
+}
+
+.sd-about-page .sd-btn-light-outline:hover {
+    background: var(--about-cream);
+    color: var(--about-green);
+}
+
+
+/* =========================================================
+   02. HERO
+========================================================= */
+
+.sd-about-page .sd-about-hero {
+    position: relative;
+    isolation: isolate;
+
+    min-height: 650px;
+
+    padding: 100px 30px 55px;
+
+    background: var(--about-green-deep);
+    color: var(--about-cream);
+
+    overflow: hidden;
+}
+
+.sd-about-page .sd-about-hero-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(198, 163, 91, 0.13),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(40, 86, 61, 0.55),
+            transparent 40%
+        ),
+        linear-gradient(
+            120deg,
+            #0B2117 0%,
+            #102B1F 55%,
+            #173D2B 100%
+        );
+}
+
+.sd-about-page .sd-about-hero::before {
+    content: "";
+
+    position: absolute;
+    top: -250px;
+    right: -120px;
+
+    width: 650px;
+    height: 650px;
+
+    border: 1px solid rgba(225, 201, 142, 0.15);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.sd-about-page .sd-about-hero::after {
+    content: "";
+
+    position: absolute;
+    top: -170px;
+    right: -40px;
+
+    width: 490px;
+    height: 490px;
+
+    border: 1px solid rgba(225, 201, 142, 0.10);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.sd-about-page .sd-about-hero-inner {
+    position: relative;
+
+    width: 100%;
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+
+    align-items: center;
+    gap: 70px;
+}
+
+.sd-about-page .sd-about-hero-copy {
+    max-width: 640px;
+}
+
+.sd-about-page .sd-about-hero-copy h1 {
+    margin: 0 0 26px;
+
+    color: var(--about-cream);
+
+    font-size: clamp(44px, 5.2vw, 72px);
+    letter-spacing: -1.8px;
+    line-height: 1.12;
+}
+
+.sd-about-page .sd-about-hero-copy h1 > span,
+.sd-about-page .sd-about-hero-copy h1 > em {
+    display: block;
+}
+
+.sd-about-page .sd-about-hero-copy h1 > span {
+    color: var(--about-gold-light);
+}
+
+.sd-about-page .sd-about-hero-copy h1 > em {
+    color: var(--about-cream);
+    font-weight: 400;
+}
+
+.sd-about-page .sd-about-hero-description {
+    max-width: 520px;
+
+    margin: 0 0 30px;
+
+    color: rgba(245, 240, 229, 0.72);
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-about-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.sd-about-page .sd-about-hero-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 34px;
+
+    color: rgba(245, 240, 229, 0.68);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.sd-about-page .sd-status-dot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    background: var(--about-gold);
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 5px rgba(198, 163, 91, 0.12);
+}
+
+
+/* Hero visual */
+
+.sd-about-page .sd-about-hero-visual {
+    position: relative;
+
+    min-height: 440px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sd-about-page .sd-hero-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(225, 201, 142, 0.18);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.sd-about-page .sd-hero-orbit-one {
+    width: 360px;
+    height: 360px;
+}
+
+.sd-about-page .sd-hero-orbit-two {
+    width: 290px;
+    height: 290px;
+
+    border-color: rgba(225, 201, 142, 0.12);
+}
+
+.sd-about-page .sd-hero-monogram {
+    position: relative;
+    z-index: 1;
+
+    width: 260px;
+    height: 310px;
+
+    padding: 35px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+background:
+        linear-gradient(
+            145deg,
+            rgba(245, 240, 229, 0.10),
+            rgba(245, 240, 229, 0.025)
+        );
+
+    border: 1px solid rgba(225, 201, 142, 0.45);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.18),
+        inset 0 0 35px rgba(225, 201, 142, 0.04);
+
+    text-align: center;
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.4s ease;
+}
+
+.sd-about-page .sd-hero-monogram:hover {
+    transform: translateY(-8px);
+    border-color: var(--about-gold-light);
+}
+
+.sd-about-page .sd-monogram-small {
+    color: var(--about-gold-light);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.3px;
+}
+.sd-monogram {
+    width: 150px;
+    height: 120px;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.sd-monogram i {
+    font-size: 55px;
+    line-height: 1;
+}
+.sd-monogram-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: content;
+    object-position: center;
+}
+
+.sd-about-page .sd-monogram-letters {
+    margin: 22px 0;
+
+    color: var(--about-cream);
+
+    font-family: var(--about-heading);
+    font-size: 76px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.sd-about-page .sd-monogram-letters > span {
+    color: var(--about-gold);
+
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.sd-about-page .sd-monogram-line {
+    width: 55px;
+    height: 1px;
+
+    margin-bottom: 22px;
+
+    background: var(--about-gold);
+}
+
+.sd-about-page .sd-monogram-name {
+    color: var(--about-cream);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sd-about-page .sd-monogram-tagline {
+    margin-top: 9px;
+
+    color: rgba(245, 240, 229, 0.55);
+
+    font-size: 8px;
+    letter-spacing: 1.3px;
+}
+
+.sd-about-page .sd-hero-floating-card {
+    position: absolute;
+    z-index: 2;
+
+    right: -10px;
+    bottom: 10px;
+
+    max-width: 300px;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    background: var(--about-cream-light);
+    color: var(--about-green);
+
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.17);
+
+    transition: transform 0.3s ease;
+}
+
+.sd-about-page .sd-hero-floating-card:hover {
+    transform: translateY(-5px);
+}
+
+.sd-about-page .sd-floating-card-number {
+    color: var(--about-gold-dark);
+
+    font-family: var(--about-heading);
+    font-size: 25px;
+    line-height: 1;
+}
+
+.sd-about-page .sd-hero-floating-card strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.sd-about-page .sd-hero-floating-card p {
+    margin: 0;
+
+    color: var(--about-muted);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.sd-about-page .sd-hero-side-label {
+    position: absolute;
+    top: 50%;
+    right: -55px;
+
+    color: rgba(245, 240, 229, 0.40);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    writing-mode: vertical-rl;
+    transform: translateY(-50%);
+}
+
+.sd-about-page .sd-about-hero-bottom {
+    width: 100%;
+    max-width: 1240px;
+
+    margin: 65px auto 0;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    color: rgba(245, 240, 229, 0.52);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.sd-about-page .sd-hero-bottom-line {
+    width: 65px;
+    height: 1px;
+
+    background: rgba(225, 201, 142, 0.5);
+}
+
+.sd-about-page .sd-about-hero-bottom > a {
+    color: var(--about-gold-light);
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   03. STORY
+========================================================= */
+
+.sd-about-page .sd-story-section {
+    padding: 115px 30px;
+
+    background: var(--about-cream-light);
+}
+
+.sd-about-page .sd-story-grid {
+    display: grid;
+
+    grid-template-columns: 190px minmax(0, 1fr);
+
+    gap: 80px;
+}
+
+.sd-about-page .sd-section-index {
+    color: var(--about-gold-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.sd-about-page .sd-story-vertical-line {
+    width: 1px;
+    height: 145px;
+
+    margin: 30px 0;
+
+    background: linear-gradient(
+        to bottom,
+        var(--about-gold),
+        rgba(198, 163, 91, 0.08)
+    );
+}
+
+.sd-about-page .sd-story-side-caption {
+    display: block;
+
+    max-width: 140px;
+
+    color: var(--about-muted);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-story-content h2 {
+    max-width: 780px;
+
+    margin: 0 0 28px;
+
+    color: var(--about-green);
+
+    font-size: clamp(35px, 4.2vw, 55px);
+    letter-spacing: -0.8px;
+}
+
+.sd-about-page .sd-story-content h2 > span {
+    display: block;
+    color: var(--about-gold-dark);
+}
+
+.sd-about-page .sd-story-lead {
+    max-width: 760px;
+
+    margin-bottom: 22px;
+
+    color: var(--about-green);
+
+    font-family: var(--about-heading);
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.sd-about-page .sd-story-content > p:not(.sd-story-lead) {
+    max-width: 780px;
+
+    margin-bottom: 18px;
+
+    color: var(--about-text);
+
+    font-size: 14px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-story-quote {
+    position: relative;
+
+    max-width: 760px;
+
+    margin-top: 42px;
+    padding: 35px 35px 32px;
+
+    background: var(--about-cream);
+    border-left: 3px solid var(--about-gold);
+}
+
+.sd-about-page .sd-quote-mark {
+    display: block;
+
+    margin-bottom: -12px;
+
+    color: var(--about-gold);
+
+    font-family: var(--about-heading);
+    font-size: 60px;
+    line-height: 1;
+}
+
+.sd-about-page .sd-story-quote blockquote {
+    margin: 0 0 20px;
+
+    color: var(--about-green);
+
+    font-family: var(--about-heading);
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+.sd-about-page .sd-quote-caption {
+    color: var(--about-muted);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+
+/* =========================================================
+   04. PHILOSOPHY
+========================================================= */
+
+.sd-about-page .sd-philosophy-section {
+    padding: 110px 30px;
+
+    background: var(--about-cream);
+}
+
+.sd-about-page .sd-section-heading {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.sd-about-page .sd-section-heading h2 {
+    margin: 0 0 20px;
+
+    color: var(--about-green);
+
+    font-size: clamp(34px, 4vw, 50px);
+}
+
+.sd-about-page .sd-section-heading h2 > span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--about-gold-dark);
+}
+
+.sd-about-page .sd-section-heading > p {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    color: var(--about-muted);
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.sd-about-page .sd-philosophy-card {
+    min-width: 0;
+
+    padding: 28px 27px 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--about-cream-light);
+    border: 1px solid rgba(23, 61, 43, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.sd-about-page .sd-philosophy-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(198, 163, 91, 0.7);
+
+    box-shadow: 0 20px 45px rgba(16, 43, 31, 0.08);
+}
+
+.sd-about-page .sd-philosophy-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 42px;
+}
+
+.sd-about-page .sd-card-number {
+    color: var(--about-gold-dark);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.sd-about-page .sd-card-symbol {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(198, 163, 91, 0.45);
+    border-radius: 50%;
+
+    color: var(--about-gold-dark);
+
+    font-size: 20px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.sd-about-page .sd-philosophy-card:hover .sd-card-symbol {
+    background: var(--about-green);
+    color: var(--about-gold-light);
+    transform: rotate(45deg);
+}
+
+.sd-about-page .sd-card-kicker {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--about-gold-dark);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.sd-about-page .sd-philosophy-card h3 {
+    margin: 0 0 16px;
+
+    color: var(--about-green);
+    font-size: 25px;
+}
+
+.sd-about-page .sd-philosophy-card-body > p {
+    margin: 0;
+
+    color: var(--about-muted);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-card-bottom {
+    margin-top: 35px;
+    padding-top: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--about-border);
+
+    color: var(--about-green);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sd-about-page .sd-card-bottom > span:last-child {
+    color: var(--about-gold-dark);
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   05. REGIONAL IDENTITY
+========================================================= */
+
+.sd-about-page .sd-region-section {
+    position: relative;
+    isolation: isolate;
+
+    padding: 110px 30px;
+
+    background: var(--about-green);
+    color: var(--about-cream);
+
+    overflow: hidden;
+}
+
+.sd-about-page .sd-region-background-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(198, 163, 91, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            var(--about-green) 0%,
+            var(--about-green-dark) 100%
+        );
+}
+
+.sd-about-page .sd-region-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+
+    align-items: center;
+    gap: 85px;
+}
+
+.sd-about-page .sd-region-visual {
+    position: relative;
+
+    padding: 22px;
+
+    border: 1px solid rgba(225, 201, 142, 0.35);
+}
+
+.sd-about-page .sd-region-frame {
+    min-height: 410px;
+
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(198, 163, 91, 0.12),
+            transparent 65%
+        ),
+        #102B1F;
+}
+
+.sd-about-page .sd-region-inner {
+    width: 100%;
+    min-height: 340px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgba(225, 201, 142, 0.24);
+
+    text-align: center;
+}
+
+.sd-about-page .sd-region-top-label,
+.sd-about-page .sd-region-coordinates {
+    color: var(--about-gold-light);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sd-about-page .sd-region-emblem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sd-about-page .sd-region-emblem-top {
+    color: rgba(245, 240, 229, 0.65);
+
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.sd-about-page .sd-region-emblem-title {
+    margin: 12px 0;
+
+    color: var(--about-cream);
+
+    font-family: var(--about-heading);
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.sd-about-page .sd-region-emblem-rule {
+    width: 65px;
+    height: 2px;
+
+    background: var(--about-gold);
+}
+
+.sd-about-page .sd-region-emblem-bottom {
+    margin-top: 16px;
+
+    color: var(--about-gold-light);
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.sd-about-page .sd-region-corner-note {
+    position: absolute;
+    right: -15px;
+    bottom: 35px;
+
+    padding: 12px 16px;
+
+    background: var(--about-gold-light);
+    color: var(--about-green-deep);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.sd-about-page .sd-region-copy h2 {
+    margin: 0 0 24px;
+
+    color: var(--about-cream);
+
+    font-size: clamp(35px, 4vw, 52px);
+}
+
+.sd-about-page .sd-region-copy h2 > span {
+    display: block;
+    color: var(--about-gold-light);
+}
+
+.sd-about-page .sd-region-lead {
+    margin-bottom: 22px;
+
+    color: var(--about-cream);
+
+    font-family: var(--about-heading);
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.sd-about-page .sd-region-copy > p:not(.sd-region-lead) {
+    margin-bottom: 18px;
+
+    color: rgba(245, 240, 229, 0.68);
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-region-highlight {
+    margin-top: 32px;
+    padding: 20px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    border: 1px solid rgba(225, 201, 142, 0.25);
+    background: rgba(245, 240, 229, 0.035);
+}
+
+.sd-about-page .sd-region-highlight-icon {
+    color: var(--about-gold-light);
+    font-size: 22px;
+}
+
+.sd-about-page .sd-region-highlight strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--about-cream);
+    font-size: 12px;
+}
+
+.sd-about-page .sd-region-highlight p {
+    margin: 0;
+
+    color: rgba(245, 240, 229, 0.60);
+
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* =========================================================
+   06. CATEGORY SHOWCASE
+========================================================= */
+
+.sd-about-page .sd-categories-section {
+    padding: 110px 30px;
+
+    background: var(--about-cream-light);
+}
+
+.sd-about-page .sd-categories-heading {
+    margin-bottom: 48px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.sd-about-page .sd-categories-heading h2 {
+    margin: 0;
+
+    color: var(--about-green);
+    font-size: clamp(35px, 4vw, 50px);
+}
+
+.sd-about-page .sd-categories-heading h2 > span {
+    display: block;
+    color: var(--about-gold-dark);
+}
+
+.sd-about-page .sd-categories-heading > p {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: var(--about-muted);
+
+    font-size: 12px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-category-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.sd-about-page .sd-category-card {
+    min-width: 0;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(23, 61, 43, 0.09);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.sd-about-page .sd-category-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(198, 163, 91, 0.55);
+
+    box-shadow: 0 20px 45px rgba(16, 43, 31, 0.09);
+}
+
+.sd-about-page .sd-category-visual {
+    position: relative;
+
+    min-height: 220px;
+    padding: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.sd-about-page .sd-category-visual::before,
+.sd-about-page .sd-category-visual::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(245, 240, 229, 0.16);
+    border-radius: 50%;
+
+    transition: transform 0.5s ease;
+}
+
+.sd-about-page .sd-category-visual::before {
+    width: 280px;
+    height: 280px;
+}
+
+.sd-about-page .sd-category-visual::after {
+    width: 210px;
+    height: 210px;
+}
+
+.sd-about-page .sd-category-card:hover .sd-category-visual::before {
+    transform: scale(1.1);
+}
+
+.sd-about-page .sd-category-card:hover .sd-category-visual::after {
+    transform: scale(1.15);
+}
+.sd-category-visual-mark i {
+    font-size: 64px;
+    color: #fff;
+    line-height: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sd-category-card:hover .sd-category-visual-mark i {
+    color: #F5F0E5;
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    .sd-category-visual-mark i {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sd-category-visual-mark i {
+        font-size: 44px;
+    }
+}
+.sd-about-page .sd-category-milk {
+    background: linear-gradient(135deg, #28563D, #102B1F);
+}
+
+.sd-about-page .sd-category-ghee {
+    background: linear-gradient(135deg, #8A6C31, #44351C);
+}
+
+.sd-about-page .sd-category-cheese {
+    background: linear-gradient(135deg, #53644B, #263A2B);
+}
+
+.sd-about-page .sd-category-dessert {
+    background: linear-gradient(135deg, #765C44, #33281F);
+}
+
+.sd-about-page .sd-category-visual-number {
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    z-index: 1;
+
+    color: rgba(245, 240, 229, 0.7);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.sd-about-page .sd-category-visual-mark {
+    position: relative;
+    z-index: 1;
+
+    color: rgba(245, 240, 229, 0.95);
+
+    font-family: var(--about-heading);
+    font-size: 82px;
+    font-weight: 500;
+    letter-spacing: 5px;
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+.sd-about-page .sd-category-card:hover .sd-category-visual-mark {
+    color: var(--about-gold-light);
+    transform: scale(1.06);
+}
+
+.sd-about-page .sd-category-visual-label {
+    position: absolute;
+    right: 24px;
+    bottom: 20px;
+    z-index: 1;
+
+    color: rgba(245, 240, 229, 0.75);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.sd-about-page .sd-category-info {
+    padding: 27px;
+}
+
+.sd-about-page .sd-category-kicker {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--about-gold-dark);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.sd-about-page .sd-category-info h3 {
+    margin: 0 0 13px;
+
+    color: var(--about-green);
+    font-size: 26px;
+}
+
+.sd-about-page .sd-category-info > p {
+    margin: 0;
+
+    color: var(--about-muted);
+
+    font-size: 12px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-category-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 25px;
+
+    color: var(--about-green);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.sd-about-page .sd-category-link > span {
+    color: var(--about-gold-dark);
+
+    transition: transform 0.3s ease;
+}
+
+.sd-about-page .sd-category-link:hover > span {
+    transform: translate(4px, -4px);
+}
+
+.sd-about-page .sd-category-disclaimer {
+    max-width: 850px;
+
+    margin: 30px auto 0;
+
+    color: var(--about-muted);
+
+    font-size: 10px;
+    line-height: 1.9;
+
+    text-align: center;
+}
+
+/* =========================================================
+   07. DIGITAL IDENTITY
+========================================================= */
+
+.sd-about-page .sd-identity-section {
+    padding: 110px 30px;
+
+    background: var(--about-cream);
+}
+
+.sd-about-page .sd-identity-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+
+    align-items: center;
+    gap: 90px;
+}
+
+.sd-about-page .sd-identity-copy h2 {
+    margin: 0 0 24px;
+
+    color: var(--about-green);
+
+    font-size: clamp(34px, 4vw, 50px);
+}
+
+.sd-about-page .sd-identity-copy h2 > span {
+    display: block;
+    color: var(--about-gold-dark);
+}
+
+.sd-about-page .sd-identity-copy > p {
+    margin-bottom: 18px;
+
+    color: var(--about-text);
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-identity-features {
+    margin-top: 35px;
+}
+
+.sd-about-page .sd-identity-feature {
+    padding: 20px 0;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+
+    border-bottom: 1px solid var(--about-border);
+}
+
+.sd-about-page .sd-identity-feature:first-child {
+    border-top: 1px solid var(--about-border);
+}
+
+.sd-about-page .sd-feature-check {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--about-green);
+    color: var(--about-gold-light);
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.sd-about-page .sd-identity-feature strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--about-green);
+    font-size: 12px;
+}
+
+.sd-about-page .sd-identity-feature p {
+    margin: 0;
+
+    color: var(--about-muted);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+
+/* Browser mockup */
+
+.sd-about-page .sd-identity-visual {
+    position: relative;
+    padding: 20px;
+}
+
+.sd-about-page .sd-browser-window {
+    position: relative;
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(23, 61, 43, 0.13);
+
+    box-shadow: 0 25px 65px rgba(16, 43, 31, 0.10);
+
+    transition: transform 0.4s ease;
+}
+
+.sd-about-page .sd-browser-window:hover {
+    transform: translateY(-7px);
+}
+
+.sd-about-page .sd-browser-top {
+    min-height: 48px;
+    padding: 12px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: #F5F0E5;
+    border-bottom: 1px solid var(--about-border);
+}
+
+.sd-about-page .sd-browser-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.sd-about-page .sd-browser-dots span {
+    width: 6px;
+    height: 6px;
+
+    background: var(--about-gold);
+    border-radius: 50%;
+}
+
+.sd-about-page .sd-browser-address {
+    flex: 1;
+
+    padding: 5px 10px;
+
+    background: #FBF9F3;
+
+    color: var(--about-muted);
+
+    font-size: 9px;
+    text-align: center;
+}
+
+.sd-about-page .sd-browser-content {
+    min-height: 360px;
+
+    padding: 45px 25px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(198, 163, 91, 0.10),
+            transparent 65%
+        ),
+        #FBF9F3;
+
+    text-align: center;
+}
+
+.sd-about-page .sd-browser-overline {
+    color: var(--about-gold-dark);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sd-about-page .sd-browser-logo {
+    margin: 20px 0;
+
+    color: var(--about-green);
+
+    font-family: var(--about-heading);
+    font-size: 76px;
+    line-height: 1;
+}
+
+.sd-about-page .sd-browser-logo-amp {
+    color: var(--about-gold);
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.sd-about-page .sd-browser-divider {
+    width: 50px;
+    height: 2px;
+
+    background: var(--about-gold);
+}
+
+.sd-about-page .sd-browser-content h3 {
+    margin: 22px 0 10px;
+
+    color: var(--about-green);
+
+    font-size: 30px;
+}
+
+.sd-about-page .sd-browser-content h3 > span {
+    color: var(--about-gold-dark);
+}
+
+.sd-about-page .sd-browser-content > p {
+    color: var(--about-muted);
+    font-size: 11px;
+}
+
+.sd-about-page .sd-browser-bottom {
+    width: 100%;
+
+    margin-top: 30px;
+    padding-top: 16px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid var(--about-border);
+
+    color: var(--about-muted);
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.sd-about-page .sd-identity-stamp {
+    position: absolute;
+    right: -5px;
+    bottom: 35px;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--about-green);
+    border: 4px solid var(--about-cream);
+
+    border-radius: 50%;
+
+    color: var(--about-gold-light);
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    box-shadow: var(--shadow-md);
+}
+
+.sd-about-page .sd-identity-stamp strong {
+    margin: 3px 0;
+
+    color: var(--about-cream);
+
+    font-family: var(--about-heading);
+    font-size: 25px;
+}
+
+/* =========================================================
+   08. POTENTIAL BUYERS
+========================================================= */
+
+.sd-about-page .sd-audience-section {
+    padding: 110px 30px;
+
+    background: var(--about-cream-light);
+}
+
+.sd-about-page .sd-audience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 17px;
+}
+
+.sd-about-page .sd-audience-card {
+    position: relative;
+
+    min-width: 0;
+    min-height: 280px;
+
+    padding: 25px 22px;
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(23, 61, 43, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sd-about-page .sd-audience-card:hover {
+    transform: translateY(-7px);
+
+    background: var(--about-green);
+    border-color: var(--about-green);
+
+    box-shadow: 0 20px 45px rgba(16, 43, 31, 0.12);
+}
+
+.sd-about-page .sd-audience-number {
+    color: var(--about-gold-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.sd-about-page .sd-audience-icon {
+    width: 46px;
+    height: 46px;
+
+    margin: 28px 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--about-cream);
+
+    color: var(--about-gold-dark);
+
+    font-size: 22px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.sd-about-page .sd-audience-card:hover .sd-audience-icon {
+    background: rgba(225, 201, 142, 0.15);
+    color: var(--about-gold-light);
+}
+
+.sd-about-page .sd-audience-card h3 {
+    margin: 0 0 14px;
+
+    color: var(--about-green);
+    font-size: 21px;
+
+    transition: color 0.3s ease;
+}
+
+.sd-about-page .sd-audience-card p {
+    margin: 0;
+
+    color: var(--about-muted);
+
+    font-size: 11px;
+    line-height: 1.9;
+
+    transition: color 0.3s ease;
+}
+
+.sd-about-page .sd-audience-card:hover h3 {
+    color: var(--about-cream);
+}
+
+.sd-about-page .sd-audience-card:hover p {
+    color: rgba(245, 240, 229, 0.72);
+}
+
+
+/* =========================================================
+   09. ACQUISITION
+========================================================= */
+
+.sd-about-page .sd-acquisition-section {
+    position: relative;
+    isolation: isolate;
+
+    padding: 110px 30px;
+
+    background: var(--about-green-deep);
+    color: var(--about-cream);
+
+    overflow: hidden;
+}
+
+.sd-about-page .sd-acquisition-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(198, 163, 91, 0.13),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #0B2117,
+            #102B1F
+        );
+}
+
+.sd-about-page .sd-acquisition-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+
+    align-items: center;
+    gap: 80px;
+}
+
+.sd-about-page .sd-acquisition-copy h2 {
+    margin: 0 0 24px;
+
+    color: var(--about-cream);
+
+    font-size: clamp(36px, 4.5vw, 57px);
+}
+
+.sd-about-page .sd-acquisition-copy h2 > span {
+    display: block;
+    color: var(--about-gold-light);
+}
+
+.sd-about-page .sd-acquisition-copy > p {
+    margin-bottom: 18px;
+
+    color: rgba(245, 240, 229, 0.68);
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-acquisition-points {
+    margin: 30px 0;
+}
+
+.sd-about-page .sd-acquisition-points > div {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    margin-bottom: 13px;
+}
+
+.sd-about-page .sd-acquisition-points > div > span {
+    color: var(--about-gold-light);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sd-about-page .sd-acquisition-points p {
+    margin: 0;
+
+    color: var(--about-cream);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* Acquisition card */
+
+.sd-about-page .sd-acquisition-card {
+    padding: 28px;
+
+    background: var(--about-cream-light);
+    color: var(--about-green);
+
+    border: 1px solid rgba(225, 201, 142, 0.5);
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.sd-about-page .sd-acquisition-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.24);
+}
+
+.sd-about-page .sd-acquisition-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid var(--about-border);
+
+    color: var(--about-gold-dark);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.sd-about-page .sd-acquisition-card-mark {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--about-green);
+    color: var(--about-gold-light);
+
+    font-family: var(--about-heading);
+    font-size: 17px;
+}
+
+.sd-about-page .sd-acquisition-domain {
+    padding: 32px 0;
+}
+
+.sd-about-page .sd-acquisition-domain-label {
+    color: var(--about-muted);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.sd-about-page .sd-acquisition-domain h3 {
+    margin: 16px 0 12px;
+
+    color: var(--about-green);
+
+    font-family: var(--about-heading);
+    font-size: clamp(25px, 3vw, 37px);
+
+    overflow-wrap: anywhere;
+}
+
+.sd-about-page .sd-acquisition-domain h3 > span {
+    color: var(--about-gold-dark);
+}
+
+.sd-about-page .sd-acquisition-domain > p {
+    margin: 0;
+
+    color: var(--about-muted);
+    font-size: 11px;
+}
+
+.sd-about-page .sd-acquisition-card-divider {
+    width: 100%;
+    height: 1px;
+
+    background: var(--about-border);
+}
+
+.sd-about-page .sd-acquisition-details {
+    padding: 24px 0;
+
+    display: grid;
+    gap: 17px;
+}
+
+.sd-about-page .sd-acquisition-details > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.sd-about-page .sd-acquisition-details span {
+    color: var(--about-muted);
+    font-size: 11px;
+}
+
+.sd-about-page .sd-acquisition-details strong {
+    color: var(--about-green);
+    font-size: 11px;
+    text-align: right;
+}
+
+.sd-about-page .sd-acquisition-card-bottom {
+    padding-top: 18px;
+
+    border-top: 1px solid var(--about-border);
+
+    color: var(--about-gold-dark);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   10. WHAT IS INCLUDED
+========================================================= */
+
+.sd-about-page .sd-inclusion-section {
+    padding: 110px 30px;
+
+    background: var(--about-cream);
+}
+
+.sd-about-page .sd-inclusion-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+
+    align-items: start;
+    gap: 80px;
+}
+
+.sd-about-page .sd-inclusion-heading h2 {
+    margin: 0 0 24px;
+
+    color: var(--about-green);
+    font-size: clamp(34px, 4vw, 48px);
+}
+
+.sd-about-page .sd-inclusion-heading h2 > span {
+    display: block;
+    color: var(--about-gold-dark);
+}
+
+.sd-about-page .sd-inclusion-heading > p {
+    margin: 0;
+
+    color: var(--about-muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-inclusion-item {
+    padding: 23px 0;
+
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+
+    align-items: start;
+    gap: 17px;
+
+    border-bottom: 1px solid var(--about-border);
+
+    transition:
+        padding 0.3s ease,
+        background 0.3s ease;
+}
+
+.sd-about-page .sd-inclusion-item:first-child {
+    border-top: 1px solid var(--about-border);
+}
+
+.sd-about-page .sd-inclusion-item:hover {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.sd-about-page .sd-inclusion-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--about-green);
+    color: var(--about-gold-light);
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.sd-about-page .sd-inclusion-excluded .sd-inclusion-icon {
+    background: #E4DFD2;
+    color: #74776C;
+}
+
+.sd-about-page .sd-inclusion-item h3 {
+    margin: 0 0 7px;
+
+    color: var(--about-green);
+    font-family: var(--about-body);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sd-about-page .sd-inclusion-item p {
+    margin: 0;
+
+    color: var(--about-muted);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.sd-about-page .sd-inclusion-status {
+    padding-top: 5px;
+
+    color: var(--about-gold-dark);
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   11. FINAL CTA
+========================================================= */
+
+.sd-about-page .sd-final-cta {
+    position: relative;
+    isolation: isolate;
+
+    padding: 110px 30px;
+
+    background: var(--about-green);
+    color: var(--about-cream);
+
+    overflow: hidden;
+}
+
+.sd-about-page .sd-final-cta-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(198, 163, 91, 0.13),
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            #173D2B,
+            #102B1F
+        );
+}
+
+.sd-about-page .sd-final-cta-inner {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.sd-about-page .sd-final-cta h2 {
+    margin: 0 0 24px;
+
+    color: var(--about-cream);
+
+    font-size: clamp(36px, 5vw, 58px);
+}
+
+.sd-about-page .sd-final-cta h2 > span {
+    display: block;
+    color: var(--about-gold-light);
+    overflow-wrap: anywhere;
+}
+
+.sd-about-page .sd-final-cta-inner > p {
+    max-width: 610px;
+
+    margin: 0 auto;
+
+    color: rgba(245, 240, 229, 0.68);
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.sd-about-page .sd-final-cta-actions {
+    margin-top: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 13px;
+}
+
+.sd-about-page .sd-final-domain {
+    margin-top: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    color: rgba(245, 240, 229, 0.55);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sd-about-page .sd-final-domain-line {
+    width: 45px;
+    height: 1px;
+
+    background: rgba(225, 201, 142, 0.45);
+}
+
+
+/* =========================================================
+   12. REVEAL ANIMATIONS
+========================================================= */
+
+/*
+   JS adds .sd-reveal-ready to the page only when
+   IntersectionObserver is supported.
+   This prevents content from staying hidden if JS fails.
+*/
+
+.sd-about-page.sd-reveal-ready .sd-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+}
+
+.sd-about-page.sd-reveal-ready .sd-reveal.sd-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Staggered animation */
+
+.sd-about-page.sd-reveal-ready .sd-philosophy-card:nth-child(2),
+.sd-about-page.sd-reveal-ready .sd-audience-card:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.sd-about-page.sd-reveal-ready .sd-philosophy-card:nth-child(3),
+.sd-about-page.sd-reveal-ready .sd-audience-card:nth-child(3) {
+    transition-delay: 0.20s;
+}
+
+.sd-about-page.sd-reveal-ready .sd-audience-card:nth-child(4) {
+    transition-delay: 0.30s;
+}
+
+/* =========================================================
+   13. TABLET — 769px TO 1050px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1050px) {
+
+    .sd-about-page .sd-about-hero {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .sd-about-page .sd-about-hero-inner {
+        gap: 35px;
+    }
+
+    .sd-about-page .sd-about-hero-copy h1 {
+        font-size: 52px;
+    }
+
+    .sd-about-page .sd-about-hero-visual {
+        min-height: 390px;
+    }
+
+    .sd-about-page .sd-hero-orbit-one {
+        width: 310px;
+        height: 310px;
+    }
+
+    .sd-about-page .sd-hero-orbit-two {
+        width: 250px;
+        height: 250px;
+    }
+
+    .sd-about-page .sd-hero-monogram {
+        width: 225px;
+        height: 285px;
+    }
+
+    .sd-about-page .sd-hero-floating-card {
+        right: -5px;
+        max-width: 255px;
+    }
+
+    .sd-about-page .sd-story-grid {
+        grid-template-columns: 140px minmax(0, 1fr);
+        gap: 45px;
+    }
+
+    .sd-about-page .sd-region-grid,
+    .sd-about-page .sd-identity-grid {
+        gap: 45px;
+    }
+
+    .sd-about-page .sd-audience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sd-about-page .sd-acquisition-grid {
+        gap: 45px;
+    }
+
+    .sd-about-page .sd-inclusion-grid {
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   14. TABLET & MOBILE — 768px AND BELOW
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .sd-about-page .sd-about-hero {
+        min-height: auto;
+        padding: 75px 24px 40px;
+    }
+
+    .sd-about-page .sd-about-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sd-about-page .sd-about-hero-copy {
+        max-width: 650px;
+    }
+
+    .sd-about-page .sd-about-hero-copy h1 {
+        font-size: clamp(43px, 7.5vw, 62px);
+    }
+
+    .sd-about-page .sd-about-hero-visual {
+        min-height: 390px;
+    }
+
+    .sd-about-page .sd-hero-side-label {
+        right: 0;
+    }
+
+    .sd-about-page .sd-about-hero-bottom {
+        margin-top: 40px;
+    }
+
+
+    .sd-about-page .sd-story-section,
+    .sd-about-page .sd-philosophy-section,
+    .sd-about-page .sd-region-section,
+    .sd-about-page .sd-categories-section,
+    .sd-about-page .sd-identity-section,
+    .sd-about-page .sd-audience-section,
+    .sd-about-page .sd-acquisition-section,
+    .sd-about-page .sd-inclusion-section,
+    .sd-about-page .sd-final-cta {
+        padding: 80px 24px;
+    }
+
+
+    .sd-about-page .sd-story-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .sd-about-page .sd-story-side {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .sd-about-page .sd-story-vertical-line {
+        width: 45px;
+        height: 1px;
+        margin: 0;
+    }
+
+    .sd-about-page .sd-story-side-caption {
+        max-width: none;
+    }
+
+
+    .sd-about-page .sd-philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .sd-about-page .sd-philosophy-card {
+        padding: 25px;
+    }
+
+    .sd-about-page .sd-philosophy-card-top {
+        margin-bottom: 25px;
+    }
+
+
+    .sd-about-page .sd-region-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .sd-about-page .sd-region-visual {
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .sd-about-page .sd-categories-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+
+    .sd-about-page .sd-identity-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .sd-about-page .sd-identity-visual {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+
+    .sd-about-page .sd-audience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+
+    .sd-about-page .sd-acquisition-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .sd-about-page .sd-acquisition-card {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+
+    .sd-about-page .sd-inclusion-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   15. MOBILE — 480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .sd-about-page {
+        font-size: 14px;
+    }
+
+    .sd-about-page .sd-about-hero {
+        padding: 58px 20px 35px;
+    }
+
+    .sd-about-page .sd-about-hero-copy h1 {
+        margin-bottom: 22px;
+
+        font-size: clamp(39px, 11vw, 49px);
+        letter-spacing: -1px;
+    }
+
+    .sd-about-page .sd-about-hero-description {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .sd-about-page .sd-about-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .sd-about-page .sd-about-hero-actions .sd-btn {
+        width: 100%;
+    }
+
+    .sd-about-page .sd-about-hero-note {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .sd-about-page .sd-about-hero-visual {
+        min-height: 330px;
+    }
+
+    .sd-about-page .sd-hero-orbit-one {
+        width: 290px;
+        height: 290px;
+    }
+
+    .sd-about-page .sd-hero-orbit-two {
+        width: 230px;
+        height: 230px;
+    }
+
+    .sd-about-page .sd-hero-monogram {
+        width: 210px;
+        height: 255px;
+    }
+
+    .sd-about-page .sd-monogram-letters {
+        font-size: 65px;
+    }
+
+    .sd-about-page .sd-hero-floating-card {
+        right: -3px;
+        bottom: 0;
+
+        max-width: 245px;
+        padding: 14px;
+    }
+
+    .sd-about-page .sd-hero-side-label {
+        right: -8px;
+        font-size: 7px;
+    }
+
+    .sd-about-page .sd-about-hero-bottom {
+        gap: 12px;
+        font-size: 8px;
+    }
+
+
+    .sd-about-page .sd-story-section,
+    .sd-about-page .sd-philosophy-section,
+    .sd-about-page .sd-region-section,
+    .sd-about-page .sd-categories-section,
+    .sd-about-page .sd-identity-section,
+    .sd-about-page .sd-audience-section,
+    .sd-about-page .sd-acquisition-section,
+    .sd-about-page .sd-inclusion-section,
+    .sd-about-page .sd-final-cta {
+        padding: 65px 20px;
+    }
+
+
+    .sd-about-page .sd-eyebrow {
+        margin-bottom: 15px;
+        font-size: 9px;
+        letter-spacing: 1.6px;
+    }
+
+    .sd-about-page .sd-story-content h2,
+    .sd-about-page .sd-section-heading h2,
+    .sd-about-page .sd-region-copy h2,
+    .sd-about-page .sd-categories-heading h2,
+    .sd-about-page .sd-identity-copy h2,
+    .sd-about-page .sd-inclusion-heading h2 {
+        font-size: 34px;
+        letter-spacing: -0.5px;
+    }
+
+    .sd-about-page .sd-story-lead {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .sd-about-page .sd-story-content > p:not(.sd-story-lead) {
+        font-size: 13px;
+    }
+
+    .sd-about-page .sd-story-quote {
+        padding: 25px 22px;
+    }
+
+    .sd-about-page .sd-story-quote blockquote {
+        font-size: 20px;
+    }
+
+
+    .sd-about-page .sd-section-heading {
+        margin-bottom: 35px;
+        text-align: left;
+    }
+
+    .sd-about-page .sd-section-heading > p {
+        font-size: 12px;
+    }
+
+
+    .sd-about-page .sd-region-visual {
+        padding: 12px;
+    }
+
+    .sd-about-page .sd-region-frame {
+        min-height: 320px;
+        padding: 15px;
+    }
+
+    .sd-about-page .sd-region-inner {
+        min-height: 280px;
+        padding: 18px 10px;
+    }
+
+    .sd-about-page .sd-region-emblem-title {
+        font-size: 29px;
+    }
+
+    .sd-about-page .sd-region-corner-note {
+        right: -5px;
+        bottom: 22px;
+
+        padding: 10px;
+        font-size: 8px;
+    }
+
+    .sd-about-page .sd-region-lead {
+        font-size: 18px;
+    }
+
+
+    .sd-about-page .sd-category-showcase {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sd-about-page .sd-category-visual {
+        min-height: 200px;
+    }
+
+    .sd-about-page .sd-category-info {
+        padding: 23px;
+    }
+
+    .sd-about-page .sd-category-info h3 {
+        font-size: 24px;
+    }
+
+
+    .sd-about-page .sd-identity-visual {
+        padding: 8px;
+    }
+
+    .sd-about-page .sd-browser-content {
+        min-height: 310px;
+        padding: 35px 16px 20px;
+    }
+
+    .sd-about-page .sd-browser-logo {
+        font-size: 65px;
+    }
+
+    .sd-about-page .sd-browser-content h3 {
+        font-size: 27px;
+    }
+
+    .sd-about-page .sd-identity-stamp {
+        right: -4px;
+        bottom: 20px;
+
+        width: 85px;
+        height: 85px;
+    }
+
+    .sd-about-page .sd-identity-stamp strong {
+        font-size: 20px;
+    }
+
+
+    .sd-about-page .sd-audience-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .sd-about-page .sd-audience-card {
+        min-height: auto;
+        padding: 23px;
+    }
+
+    .sd-about-page .sd-audience-icon {
+        margin: 20px 0;
+    }
+
+
+    .sd-about-page .sd-acquisition-card {
+        padding: 21px;
+    }
+
+    .sd-about-page .sd-acquisition-domain h3 {
+        font-size: 27px;
+    }
+
+
+    .sd-about-page .sd-inclusion-item {
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .sd-about-page .sd-inclusion-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .sd-about-page .sd-inclusion-status {
+        grid-column: 2;
+        text-align: left;
+    }
+
+
+    .sd-about-page .sd-final-cta h2 {
+        font-size: 36px;
+    }
+
+    .sd-about-page .sd-final-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sd-about-page .sd-final-cta-actions .sd-btn {
+        width: 100%;
+    }
+
+    .sd-about-page .sd-final-domain {
+        gap: 10px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .sd-about-page .sd-final-domain-line {
+        width: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   16. EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .sd-about-page .sd-about-hero,
+    .sd-about-page .sd-story-section,
+    .sd-about-page .sd-philosophy-section,
+    .sd-about-page .sd-region-section,
+    .sd-about-page .sd-categories-section,
+    .sd-about-page .sd-identity-section,
+    .sd-about-page .sd-audience-section,
+    .sd-about-page .sd-acquisition-section,
+    .sd-about-page .sd-inclusion-section,
+    .sd-about-page .sd-final-cta {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .sd-about-page .sd-about-hero-copy h1 {
+        font-size: 37px;
+    }
+
+    .sd-about-page .sd-hero-floating-card {
+        max-width: 225px;
+    }
+
+    .sd-about-page .sd-hero-monogram {
+        width: 190px;
+        height: 240px;
+    }
+
+    .sd-about-page .sd-monogram-letters {
+        font-size: 58px;
+    }
+
+    .sd-about-page .sd-story-content h2,
+    .sd-about-page .sd-section-heading h2,
+    .sd-about-page .sd-region-copy h2,
+    .sd-about-page .sd-categories-heading h2,
+    .sd-about-page .sd-identity-copy h2,
+    .sd-about-page .sd-inclusion-heading h2 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   17. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sd-about-page *,
+    .sd-about-page *::before,
+    .sd-about-page *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .sd-about-page.sd-reveal-ready .sd-reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}
