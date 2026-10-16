@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Home Page -->
+    <url>
+        <loc>https://saurashtradairy.com/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About Us -->
+    <url>
+        <loc>https://saurashtradairy.com/about/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Domain for Sale -->
+    <url>
+        <loc>https://saurashtradairy.com/domain-sell/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Acquire the Domain -->
+    <url>
+        <loc>https://saurashtradairy.com/acquire/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>
