@@ -537,7 +537,7 @@ background:
 
     padding: 18px;
 
-    display: flex;
+    display: none!important;
     align-items: flex-start;
     gap: 14px;
 
