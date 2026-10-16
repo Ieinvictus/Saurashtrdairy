@@ -2841,3 +2841,16 @@ background:
     }
 
 }
+/* Tablet: 768px */
+@media (max-width: 768px) {
+    .sd-region-corner-note {
+        bottom: 10px!important;
+    }
+}
+
+/* Mobile: 480px */
+@media (max-width: 480px) {
+    .sd-region-corner-note {
+        bottom: 10px!important;
+    }
+}
