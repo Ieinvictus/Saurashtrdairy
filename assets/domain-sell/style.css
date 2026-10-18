@@ -1,0 +1,2136 @@
+/* =========================================================
+   SAURASHTRA DAIRY
+   PREMIUM DOMAIN ACQUISITION PAGE
+   Theme: Forest Green | Ivory | Champagne Gold
+   File: assets/domain-sell/style.css
+========================================================= */
+
+/* =========================
+   01. GOOGLE FONTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================
+   02. RESET & BASE
+========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #FBF9F3;
+    color: #173D2B;
+    font-family: "DM Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: "DM Sans", sans-serif;
+}
+
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #C6A35B;
+    outline-offset: 4px;
+}
+
+::selection {
+    color: #FFFFFF;
+    background: #173D2B;
+}
+
+
+/* =========================
+   03. PAGE ROOT
+========================= */
+
+.sd-sale-page {
+    --sd-green: #173D2B;
+    --sd-green-dark: #102B1F;
+    --sd-green-deep: #0B2117;
+    --sd-green-light: #24553D;
+    --sd-gold: #C6A35B;
+    --sd-gold-light: #E1C98E;
+    --sd-cream: #FBF9F3;
+    --sd-ivory: #F5F0E5;
+    --sd-white: #FFFFFF;
+    --sd-text: #173D2B;
+    --sd-muted: #6D786E;
+    --sd-border: rgba(23, 61, 43, 0.13);
+    --sd-radius: 24px;
+    --sd-radius-lg: 34px;
+    --sd-shadow: 0 20px 60px rgba(16, 43, 31, 0.09);
+    --sd-shadow-hover: 0 28px 75px rgba(16, 43, 31, 0.15);
+
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+    background: var(--sd-cream);
+    color: var(--sd-text);
+}
+
+.sd-sale-page section {
+    position: relative;
+    width: 100%;
+}
+
+.sd-sale-page .sd-container {
+    width: min(1200px, calc(100% - 80px));
+    margin-inline: auto;
+}
+
+.sd-sale-page .sd-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--sd-green-light);
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.sd-sale-page .sd-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    flex: 0 0 28px;
+    background: var(--sd-gold);
+}
+
+.sd-sale-page .sd-section-title {
+    max-width: 780px;
+    color: var(--sd-green-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(34px, 4.2vw, 58px);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -1.6px;
+}
+
+.sd-sale-page .sd-section-description {
+    max-width: 640px;
+    margin-top: 20px;
+    color: var(--sd-muted);
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+.sd-sale-page .sd-gold-text {
+    color: var(--sd-gold);
+}
+
+.sd-sale-page .sd-text-center {
+    text-align: center;
+}
+
+.sd-sale-page .sd-text-center .sd-eyebrow {
+    justify-content: center;
+}
+
+.sd-sale-page .sd-text-center .sd-section-title,
+.sd-sale-page .sd-text-center .sd-section-description {
+    margin-inline: auto;
+}
+
+
+/* =========================
+   04. BUTTON SYSTEM
+========================= */
+
+.sd-sale-page .sd-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 54px;
+    padding: 15px 24px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.sd-sale-page .sd-btn:hover {
+    transform: translateY(-3px);
+}
+
+.sd-sale-page .sd-btn-primary {
+    color: var(--sd-green-deep);
+    background: linear-gradient(
+        135deg,
+        #E7D49D,
+        #C6A35B
+    );
+    border-color: #C6A35B;
+    box-shadow: 0 10px 28px rgba(198, 163, 91, 0.18);
+}
+
+.sd-sale-page .sd-btn-primary:hover {
+    color: #FFFFFF;
+    background: var(--sd-green-light);
+    border-color: var(--sd-green-light);
+    box-shadow: 0 15px 35px rgba(16, 43, 31, 0.18);
+}
+
+.sd-sale-page .sd-btn-outline {
+    color: var(--sd-green);
+    background: transparent;
+    border-color: rgba(23, 61, 43, 0.25);
+}
+
+.sd-sale-page .sd-btn-outline:hover {
+    color: #FFFFFF;
+    background: var(--sd-green);
+    border-color: var(--sd-green);
+}
+
+.sd-sale-page .sd-btn-dark {
+    color: #FFFFFF;
+    background: var(--sd-green-dark);
+    border-color: var(--sd-green-dark);
+}
+
+.sd-sale-page .sd-btn-dark:hover {
+    color: var(--sd-green-deep);
+    background: var(--sd-gold-light);
+    border-color: var(--sd-gold-light);
+}
+
+.sd-sale-page .sd-btn-arrow {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.sd-sale-page .sd-btn:hover .sd-btn-arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================
+   05. HERO SECTION
+========================= */
+
+.sd-sale-page .sd-sale-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 680px;
+    padding: 100px 0 95px;
+    color: #FFFFFF;
+    background:
+        radial-gradient(
+            circle at 82% 18%,
+            rgba(198, 163, 91, 0.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 10% 95%,
+            rgba(65, 116, 82, 0.2),
+            transparent 35%
+        ),
+        linear-gradient(
+            130deg,
+            #0B2117 0%,
+            #102B1F 50%,
+            #173D2B 100%
+        );
+    isolation: isolate;
+}
+
+.sd-sale-page .sd-sale-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.16;
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.07) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.07) 1px,
+            transparent 1px
+        );
+    background-size: 70px 70px;
+    mask-image: linear-gradient(
+        to bottom right,
+        black,
+        transparent 85%
+    );
+}
+
+.sd-sale-page .sd-sale-hero::after {
+    content: "";
+    position: absolute;
+    right: -180px;
+    top: -250px;
+    z-index: -1;
+    width: 620px;
+    aspect-ratio: 1;
+    border: 1px solid rgba(225, 201, 142, 0.16);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 45px rgba(225, 201, 142, 0.025),
+        0 0 0 90px rgba(225, 201, 142, 0.02);
+    pointer-events: none;
+}
+
+.sd-sale-page .sd-hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    align-items: center;
+    gap: 70px;
+}
+
+.sd-sale-page .sd-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.sd-sale-page .sd-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    padding: 10px 15px;
+    color: var(--sd-gold-light);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(225, 201, 142, 0.28);
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sd-sale-page .sd-hero-badge::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    background: var(--sd-gold);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(198, 163, 91, 0.55);
+}
+
+.sd-sale-page .sd-hero-title {
+    max-width: 750px;
+    color: #FFFFFF;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(44px, 6vw, 78px);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -2.8px;
+    overflow-wrap: anywhere;
+}
+
+.sd-sale-page .sd-hero-title span {
+    display: block;
+    color: var(--sd-gold-light);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.sd-sale-page .sd-hero-description {
+    max-width: 570px;
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+.sd-sale-page .sd-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.sd-sale-page .sd-sale-hero .sd-btn-outline {
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sd-sale-page .sd-sale-hero .sd-btn-outline:hover {
+    color: var(--sd-green-deep);
+    background: var(--sd-gold-light);
+    border-color: var(--sd-gold-light);
+}
+
+.sd-sale-page .sd-hero-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 28px;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.sd-sale-page .sd-hero-note span {
+    color: var(--sd-gold-light);
+    font-size: 15px;
+}
+
+
+/* =========================
+   06. HERO DOMAIN ARTWORK
+========================= */
+
+.sd-sale-page .sd-domain-art {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 420px;
+    perspective: 1000px;
+}
+
+.sd-sale-page .sd-art-orbit {
+    position: absolute;
+    width: min(100%, 420px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(225, 201, 142, 0.19);
+    border-radius: 50%;
+    animation: sdOrbit 30s linear infinite;
+}
+
+.sd-sale-page .sd-art-orbit::before,
+.sd-sale-page .sd-art-orbit::after {
+    content: "";
+    position: absolute;
+    inset: 25px;
+    border: 1px dashed rgba(225, 201, 142, 0.18);
+    border-radius: 50%;
+}
+
+.sd-sale-page .sd-art-orbit::after {
+    inset: 65px;
+    border-style: solid;
+    opacity: 0.6;
+}
+
+.sd-sale-page .sd-domain-card {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 385px);
+    padding: 38px 28px;
+    overflow: hidden;
+    color: #FFFFFF;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.105),
+            rgba(255, 255, 255, 0.025)
+        );
+    border: 1px solid rgba(225, 201, 142, 0.4);
+    border-radius: 20px;
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transform: rotateY(-7deg) rotateX(3deg);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.sd-sale-page .sd-domain-card:hover {
+    transform: rotateY(0) rotateX(0) translateY(-7px);
+    box-shadow:
+        0 45px 100px rgba(0, 0, 0, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.sd-sale-page .sd-card-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.sd-sale-page .sd-card-monogram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--sd-gold-light);
+    border: 1px solid rgba(225, 201, 142, 0.4);
+    border-radius: 50%;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.sd-sale-page .sd-card-label {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sd-sale-page .sd-card-domain {
+    color: #FFFFFF;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(26px, 3.1vw, 39px);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    overflow-wrap: anywhere;
+}
+
+.sd-sale-page .sd-card-domain span {
+    color: var(--sd-gold-light);
+}
+
+.sd-sale-page .sd-card-divider {
+    width: 100%;
+    height: 1px;
+    margin: 24px 0;
+    background: linear-gradient(
+        90deg,
+        var(--sd-gold),
+        rgba(225, 201, 142, 0.05)
+    );
+}
+
+.sd-sale-page .sd-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.sd-sale-page .sd-card-bottom p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.sd-sale-page .sd-card-bottom strong {
+    display: block;
+    color: var(--sd-gold-light);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sd-sale-page .sd-card-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    color: var(--sd-green-deep);
+    background: var(--sd-gold-light);
+    border-radius: 50%;
+    font-size: 19px;
+    transition: transform 0.3s ease;
+}
+
+.sd-sale-page .sd-domain-card:hover .sd-card-arrow {
+    transform: rotate(45deg);
+}
+
+.sd-sale-page .sd-floating-label {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 15px;
+    color: #FFFFFF;
+    background: rgba(16, 43, 31, 0.85);
+    border: 1px solid rgba(225, 201, 142, 0.28);
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: sdFloat 5s ease-in-out infinite;
+}
+
+.sd-sale-page .sd-floating-label span {
+    color: var(--sd-gold-light);
+    font-size: 15px;
+}
+
+.sd-sale-page .sd-floating-one {
+    top: 45px;
+    right: 0;
+}
+
+.sd-sale-page .sd-floating-two {
+    bottom: 48px;
+    left: 0;
+    animation-delay: -2.5s;
+}
+
+
+/* =========================
+   07. TRUST STRIP
+========================= */
+
+.sd-sale-page .sd-trust-strip {
+    position: relative;
+    z-index: 3;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--sd-border);
+}
+
+.sd-sale-page .sd-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.sd-sale-page .sd-trust-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 26px 18px;
+    border-right: 1px solid var(--sd-border);
+}
+
+.sd-sale-page .sd-trust-item:last-child {
+    border-right: 0;
+}
+
+.sd-sale-page .sd-trust-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    flex: 0 0 43px;
+    color: var(--sd-green);
+    background: var(--sd-ivory);
+    border: 1px solid rgba(198, 163, 91, 0.25);
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.sd-sale-page .sd-trust-copy {
+    min-width: 0;
+}
+
+.sd-sale-page .sd-trust-copy strong {
+    display: block;
+    color: var(--sd-green-dark);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.sd-sale-page .sd-trust-copy span {
+    display: block;
+    margin-top: 4px;
+    color: var(--sd-muted);
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   08. OPPORTUNITY SECTION
+========================= */
+
+.sd-sale-page .sd-opportunity {
+    padding: 115px 0;
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(198, 163, 91, 0.08),
+            transparent 32%
+        ),
+        var(--sd-cream);
+}
+
+.sd-sale-page .sd-opportunity-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 90px;
+}
+
+.sd-sale-page .sd-opportunity-copy {
+    position: sticky;
+    top: 30px;
+}
+
+.sd-sale-page .sd-opportunity-copy .sd-section-title {
+    margin-top: 24px;
+}
+
+.sd-sale-page .sd-opportunity-copy .sd-section-description {
+    margin-top: 24px;
+}
+
+.sd-sale-page .sd-opportunity-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-top: 32px;
+    padding: 19px;
+    background: rgba(23, 61, 43, 0.045);
+    border-left: 2px solid var(--sd-gold);
+    border-radius: 0 9px 9px 0;
+}
+
+.sd-sale-page .sd-opportunity-note span {
+    color: var(--sd-gold);
+    font-size: 19px;
+}
+
+.sd-sale-page .sd-opportunity-note p {
+    color: var(--sd-muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.sd-sale-page .sd-opportunity-note strong {
+    color: var(--sd-green);
+}
+
+.sd-sale-page .sd-benefit-list {
+    display: grid;
+    gap: 0;
+    border-top: 1px solid var(--sd-border);
+}
+
+.sd-sale-page .sd-benefit-item {
+    display: grid;
+    grid-template-columns: 55px minmax(0, 1fr);
+    gap: 20px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--sd-border);
+    transition: padding 0.3s ease;
+}
+
+.sd-sale-page .sd-benefit-item:hover {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.sd-sale-page .sd-benefit-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: var(--sd-green);
+    background: #FFFFFF;
+    border: 1px solid rgba(198, 163, 91, 0.4);
+    border-radius: 50%;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 17px;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.sd-sale-page .sd-benefit-item:hover .sd-benefit-number {
+    color: #FFFFFF;
+    background: var(--sd-green);
+    border-color: var(--sd-green);
+}
+
+.sd-sale-page .sd-benefit-content h3 {
+    color: var(--sd-green-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.sd-sale-page .sd-benefit-content p {
+    margin-top: 9px;
+    color: var(--sd-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   09. CATEGORY POSSIBILITIES
+========================= */
+
+.sd-sale-page .sd-category-section {
+    padding: 110px 0;
+    background: var(--sd-ivory);
+}
+
+.sd-sale-page .sd-category-heading {
+    margin-bottom: 55px;
+}
+
+.sd-sale-page .sd-category-heading .sd-section-title {
+    margin-top: 20px;
+}
+
+.sd-sale-page .sd-category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.sd-sale-page .sd-category-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 250px;
+    padding: 27px 22px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(23, 61, 43, 0.1);
+    border-radius: 16px;
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.sd-sale-page .sd-category-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--sd-gold);
+    transition: width 0.4s ease;
+}
+
+.sd-sale-page .sd-category-card:hover {
+    transform: translateY(-7px);
+    background: #FFFFFF;
+    border-color: rgba(198, 163, 91, 0.55);
+    box-shadow: var(--sd-shadow);
+}
+
+.sd-sale-page .sd-category-card:hover::before {
+    width: 100%;
+}
+
+.sd-sale-page .sd-category-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 28px;
+    color: var(--sd-green);
+    background: var(--sd-ivory);
+    border: 1px solid rgba(198, 163, 91, 0.35);
+    border-radius: 14px;
+    font-size: 23px;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.sd-sale-page .sd-category-card:hover .sd-category-icon {
+    color: var(--sd-green-deep);
+    background: var(--sd-gold-light);
+    transform: rotate(-5deg);
+}
+
+.sd-sale-page .sd-category-card h3 {
+    color: var(--sd-green-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.sd-sale-page .sd-category-card p {
+    margin-top: 10px;
+    color: var(--sd-muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.sd-sale-page .sd-category-footnote {
+    margin-top: 28px;
+    color: var(--sd-muted);
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* =========================
+   10. SOCIAL MEDIA INCLUSIONS
+========================= */
+
+.sd-sale-page .sd-inclusions {
+    padding: 115px 0;
+    background: #FFFFFF;
+}
+
+.sd-sale-page .sd-inclusions-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: 85px;
+}
+
+.sd-sale-page .sd-inclusions-copy .sd-section-title {
+    margin-top: 23px;
+}
+
+.sd-sale-page .sd-inclusions-copy .sd-section-description {
+    margin-top: 20px;
+}
+
+.sd-sale-page .sd-inclusions-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.sd-sale-page .sd-inclusion-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+    padding: 15px;
+    background: var(--sd-cream);
+    border: 1px solid var(--sd-border);
+    border-radius: 9px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sd-sale-page .sd-inclusion-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(198, 163, 91, 0.65);
+    box-shadow: 0 10px 24px rgba(16, 43, 31, 0.06);
+}
+
+.sd-sale-page .sd-inclusion-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    color: var(--sd-green);
+    background: rgba(198, 163, 91, 0.2);
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.sd-sale-page .sd-inclusion-item span:last-child {
+    min-width: 0;
+    color: var(--sd-green);
+    font-size: 12px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.sd-sale-page .sd-inclusions-visual {
+    position: relative;
+    min-width: 0;
+    padding: 38px;
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(198, 163, 91, 0.12),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            #F8F4EA,
+            #F0E9D9
+        );
+    border: 1px solid rgba(198, 163, 91, 0.22);
+    border-radius: var(--sd-radius-lg);
+}
+
+.sd-sale-page .sd-inclusions-visual::before {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    border: 1px solid rgba(198, 163, 91, 0.25);
+    border-radius: 25px;
+    pointer-events: none;
+}
+
+.sd-sale-page .sd-visual-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.sd-sale-page .sd-visual-label {
+    color: var(--sd-green);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sd-sale-page .sd-visual-seal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--sd-gold);
+    border: 1px solid rgba(198, 163, 91, 0.6);
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.sd-sale-page .sd-visual-domain {
+    position: relative;
+    color: var(--sd-green-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px, 3.3vw, 43px);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -1.4px;
+    overflow-wrap: anywhere;
+}
+
+.sd-sale-page .sd-visual-domain span {
+    color: #B08C43;
+}
+
+.sd-sale-page .sd-visual-rule {
+    width: 70px;
+    height: 2px;
+    margin: 25px 0;
+    background: var(--sd-gold);
+}
+
+.sd-sale-page .sd-visual-description {
+    position: relative;
+    color: #697568;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.sd-sale-page .sd-visual-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 35px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(23, 61, 43, 0.13);
+}
+
+.sd-sale-page .sd-visual-bottom span {
+    color: var(--sd-green);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   11. TRANSFER CLARITY
+========================= */
+
+.sd-sale-page .sd-transfer-section {
+    padding: 100px 0;
+    background:
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(198, 163, 91, 0.09),
+            transparent 35%
+        ),
+        var(--sd-cream);
+}
+
+.sd-sale-page .sd-transfer-heading {
+    margin-bottom: 45px;
+}
+
+.sd-sale-page .sd-transfer-heading .sd-section-title {
+    margin-top: 20px;
+}
+
+.sd-sale-page .sd-transfer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.sd-sale-page .sd-transfer-card {
+    min-width: 0;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid var(--sd-border);
+    border-radius: 15px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.sd-sale-page .sd-transfer-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(198, 163, 91, 0.5);
+    box-shadow: var(--sd-shadow);
+}
+
+.sd-sale-page .sd-transfer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 22px;
+    color: var(--sd-green);
+    background: var(--sd-ivory);
+    border: 1px solid rgba(198, 163, 91, 0.25);
+    border-radius: 12px;
+    font-size: 19px;
+}
+
+.sd-sale-page .sd-transfer-card h3 {
+    color: var(--sd-green-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.sd-sale-page .sd-transfer-card p {
+    margin-top: 12px;
+    color: var(--sd-muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   12. ENQUIRY SECTION
+========================= */
+
+.sd-sale-page .sd-enquiry-section {
+    padding: 115px 0;
+    color: #FFFFFF;
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(198, 163, 91, 0.14),
+            transparent 32%
+        ),
+        linear-gradient(
+            130deg,
+            #0B2117,
+            #173D2B
+        );
+}
+
+.sd-sale-page .sd-enquiry-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.08;
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.8) 1px,
+            transparent 1px
+        );
+    background-size: 26px 26px;
+    pointer-events: none;
+}
+
+.sd-sale-page .sd-enquiry-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr);
+    align-items: center;
+    gap: 75px;
+}
+
+.sd-sale-page .sd-enquiry-copy .sd-eyebrow {
+    color: var(--sd-gold-light);
+}
+
+.sd-sale-page .sd-enquiry-copy .sd-section-title {
+    margin-top: 23px;
+    color: #FFFFFF;
+}
+
+.sd-sale-page .sd-enquiry-copy .sd-section-description {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.sd-sale-page .sd-enquiry-contact-note {
+    margin-top: 25px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.sd-sale-page .sd-enquiry-card {
+    position: relative;
+    padding: 34px;
+    color: var(--sd-green);
+    background: #FBF9F3;
+    border: 1px solid rgba(225, 201, 142, 0.5);
+    border-radius: 19px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.sd-sale-page .sd-enquiry-card h3 {
+    color: var(--sd-green-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.sd-sale-page .sd-enquiry-card > p {
+    margin-top: 12px;
+    color: var(--sd-muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.sd-sale-page .sd-contact-methods {
+    display: grid;
+    gap: 12px;
+    margin-top: 27px;
+}
+
+.sd-sale-page .sd-contact-method {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+    padding: 16px;
+    background: #FFFFFF;
+    border: 1px solid var(--sd-border);
+    border-radius: 10px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sd-sale-page .sd-contact-method:hover {
+    transform: translateX(4px);
+    border-color: rgba(198, 163, 91, 0.65);
+    box-shadow: 0 8px 22px rgba(16, 43, 31, 0.06);
+}
+
+.sd-sale-page .sd-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    flex: 0 0 43px;
+    color: var(--sd-green);
+    background: var(--sd-ivory);
+    border-radius: 11px;
+    font-size: 18px;
+}
+
+.sd-sale-page .sd-contact-method-copy {
+    flex: 1;
+    min-width: 0;
+}
+
+.sd-sale-page .sd-contact-method-copy span {
+    display: block;
+    color: var(--sd-muted);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.sd-sale-page .sd-contact-method-copy strong {
+    display: block;
+    margin-top: 4px;
+    color: var(--sd-green-dark);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.sd-sale-page .sd-contact-arrow {
+    color: var(--sd-gold);
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.sd-sale-page .sd-contact-method:hover .sd-contact-arrow {
+    transform: translate(3px, -3px);
+}
+
+.sd-sale-page .sd-enquiry-privacy {
+    margin-top: 20px;
+    color: #7A8278;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   13. FINAL CTA
+========================= */
+
+.sd-sale-page .sd-final-cta {
+    padding: 85px 0;
+    background: var(--sd-ivory);
+}
+
+.sd-sale-page .sd-final-cta-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 45px 50px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid rgba(198, 163, 91, 0.3);
+    border-radius: 19px;
+    box-shadow: 0 15px 45px rgba(16, 43, 31, 0.05);
+}
+
+.sd-sale-page .sd-final-cta-inner::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -50px;
+    width: 240px;
+    aspect-ratio: 1;
+    border: 1px solid rgba(198, 163, 91, 0.22);
+    border-radius: 50%;
+    box-shadow: 0 0 0 25px rgba(198, 163, 91, 0.035);
+    pointer-events: none;
+}
+
+.sd-sale-page .sd-final-cta-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+}
+
+.sd-sale-page .sd-final-cta-copy h2 {
+    color: var(--sd-green-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(27px, 3.2vw, 40px);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.sd-sale-page .sd-final-cta-copy p {
+    margin-top: 12px;
+    color: var(--sd-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.sd-sale-page .sd-final-cta-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   14. REVEAL ANIMATIONS
+========================= */
+
+.sd-sale-page .sd-reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.sd-sale-page.sd-reveal-ready .sd-reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.sd-sale-page.sd-reveal-ready .sd-reveal.sd-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sd-sale-page.sd-reveal-ready .sd-reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.sd-sale-page.sd-reveal-ready .sd-reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.sd-sale-page.sd-reveal-ready .sd-reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+@keyframes sdFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes sdOrbit {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================
+   15. TABLET — 1050px
+========================= */
+
+@media (max-width: 1050px) {
+
+    .sd-sale-page .sd-container {
+        width: min(100% - 56px, 900px);
+    }
+
+    .sd-sale-page .sd-sale-hero {
+        min-height: auto;
+        padding: 90px 0;
+    }
+
+    .sd-sale-page .sd-hero-layout {
+        grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+        gap: 35px;
+    }
+
+    .sd-sale-page .sd-hero-title {
+        font-size: clamp(42px, 6vw, 64px);
+    }
+
+    .sd-sale-page .sd-domain-art {
+        min-height: 370px;
+    }
+
+    .sd-sale-page .sd-domain-card {
+        padding: 30px 23px;
+    }
+
+    .sd-sale-page .sd-art-orbit {
+        width: 350px;
+    }
+
+    .sd-sale-page .sd-opportunity-layout {
+        gap: 55px;
+    }
+
+    .sd-sale-page .sd-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sd-sale-page .sd-inclusions-layout {
+        gap: 45px;
+    }
+
+    .sd-sale-page .sd-inclusions-visual {
+        padding: 30px;
+    }
+
+    .sd-sale-page .sd-enquiry-layout {
+        gap: 45px;
+    }
+
+    .sd-sale-page .sd-final-cta-inner {
+        padding: 38px;
+    }
+}
+/* =========================
+   16. TABLET / MOBILE — 768px
+========================= */
+
+@media (max-width: 768px) {
+
+    .sd-sale-page .sd-container {
+        width: calc(100% - 44px);
+    }
+
+    .sd-sale-page .sd-section-title {
+        font-size: clamp(32px, 6vw, 45px);
+        letter-spacing: -1px;
+    }
+
+    .sd-sale-page .sd-sale-hero {
+        padding: 75px 0 65px;
+    }
+
+    .sd-sale-page .sd-hero-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .sd-sale-page .sd-hero-content {
+        max-width: 650px;
+    }
+
+    .sd-sale-page .sd-hero-title {
+        max-width: 620px;
+        font-size: clamp(43px, 8vw, 66px);
+        letter-spacing: -1.8px;
+    }
+
+    .sd-sale-page .sd-hero-description {
+        max-width: 570px;
+        font-size: 14px;
+    }
+
+    .sd-sale-page .sd-domain-art {
+        min-height: 340px;
+        margin-top: 15px;
+    }
+
+    .sd-sale-page .sd-art-orbit {
+        width: 320px;
+        max-width: 90%;
+    }
+
+    .sd-sale-page .sd-domain-card {
+        width: min(380px, 85%);
+        transform: none;
+    }
+
+    .sd-sale-page .sd-floating-one {
+        top: 20px;
+        right: 0;
+    }
+
+    .sd-sale-page .sd-floating-two {
+        bottom: 15px;
+        left: 0;
+    }
+
+    .sd-sale-page .sd-trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sd-sale-page .sd-trust-item {
+        justify-content: flex-start;
+        padding: 20px 5px;
+        border-right: 0;
+        border-bottom: 1px solid var(--sd-border);
+    }
+
+    .sd-sale-page .sd-trust-item:last-child {
+        border-bottom: 0;
+    }
+
+    .sd-sale-page .sd-opportunity,
+    .sd-sale-page .sd-category-section,
+    .sd-sale-page .sd-inclusions,
+    .sd-sale-page .sd-transfer-section,
+    .sd-sale-page .sd-enquiry-section {
+        padding: 80px 0;
+    }
+
+    .sd-sale-page .sd-opportunity-layout,
+    .sd-sale-page .sd-inclusions-layout,
+    .sd-sale-page .sd-enquiry-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 45px;
+    }
+
+    .sd-sale-page .sd-opportunity-copy {
+        position: relative;
+        top: auto;
+    }
+
+    .sd-sale-page .sd-benefit-item {
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .sd-sale-page .sd-benefit-number {
+        width: 43px;
+        height: 43px;
+    }
+
+    .sd-sale-page .sd-category-heading {
+        margin-bottom: 35px;
+    }
+
+    .sd-sale-page .sd-category-card {
+        min-height: 225px;
+        padding: 24px 20px;
+    }
+
+    .sd-sale-page .sd-inclusions-visual {
+        width: 100%;
+        max-width: 570px;
+        margin-inline: auto;
+    }
+
+    .sd-sale-page .sd-transfer-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .sd-sale-page .sd-transfer-card {
+        padding: 25px;
+    }
+
+    .sd-sale-page .sd-enquiry-card {
+        width: 100%;
+        max-width: 550px;
+        margin-inline: auto;
+    }
+
+    .sd-sale-page .sd-final-cta {
+        padding: 65px 0;
+    }
+
+    .sd-sale-page .sd-final-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px;
+    }
+
+    .sd-sale-page .sd-final-cta-actions {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   17. MOBILE — 480px
+========================= */
+
+@media (max-width: 480px) {
+
+    .sd-sale-page .sd-container {
+        width: calc(100% - 36px);
+    }
+
+    .sd-sale-page .sd-eyebrow {
+        gap: 8px;
+        font-size: 9px;
+        letter-spacing: 1.7px;
+    }
+
+    .sd-sale-page .sd-eyebrow::before {
+        width: 20px;
+        flex-basis: 20px;
+    }
+
+    .sd-sale-page .sd-section-title {
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.16;
+        letter-spacing: -0.7px;
+    }
+
+    .sd-sale-page .sd-section-description {
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .sd-sale-page .sd-sale-hero {
+        padding: 60px 0 48px;
+    }
+
+    .sd-sale-page .sd-hero-badge {
+        gap: 8px;
+        margin-bottom: 23px;
+        padding: 9px 12px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .sd-sale-page .sd-hero-title {
+        font-size: clamp(38px, 10vw, 49px);
+        line-height: 1.1;
+        letter-spacing: -1.3px;
+    }
+
+    .sd-sale-page .sd-hero-description {
+        margin-top: 18px;
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .sd-sale-page .sd-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 11px;
+        margin-top: 25px;
+    }
+
+    .sd-sale-page .sd-btn {
+        width: 100%;
+        min-height: 51px;
+        padding: 14px 18px;
+        font-size: 12px;
+    }
+
+    .sd-sale-page .sd-hero-note {
+        margin-top: 21px;
+        font-size: 10px;
+    }
+
+    .sd-sale-page .sd-domain-art {
+        min-height: 300px;
+        margin-top: 20px;
+    }
+
+    .sd-sale-page .sd-art-orbit {
+        width: 275px;
+    }
+
+    .sd-sale-page .sd-domain-card {
+        width: 88%;
+        padding: 26px 20px;
+        border-radius: 15px;
+    }
+
+    .sd-sale-page .sd-card-topline {
+        margin-bottom: 29px;
+    }
+
+    .sd-sale-page .sd-card-monogram {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .sd-sale-page .sd-card-domain {
+        font-size: clamp(25px, 7.3vw, 33px);
+        letter-spacing: -0.6px;
+    }
+
+    .sd-sale-page .sd-card-divider {
+        margin: 19px 0;
+    }
+
+    .sd-sale-page .sd-floating-label {
+        gap: 7px;
+        padding: 9px 10px;
+        font-size: 8px;
+    }
+
+    .sd-sale-page .sd-floating-one {
+        top: 6px;
+        right: 0;
+    }
+
+    .sd-sale-page .sd-floating-two {
+        bottom: 5px;
+        left: 0;
+    }
+
+    .sd-sale-page .sd-trust-item {
+        padding: 17px 0;
+    }
+
+    .sd-sale-page .sd-trust-icon {
+        width: 39px;
+        height: 39px;
+        flex-basis: 39px;
+        font-size: 16px;
+    }
+
+    .sd-sale-page .sd-opportunity,
+    .sd-sale-page .sd-category-section,
+    .sd-sale-page .sd-inclusions,
+    .sd-sale-page .sd-transfer-section,
+    .sd-sale-page .sd-enquiry-section {
+        padding: 65px 0;
+    }
+
+    .sd-sale-page .sd-opportunity-layout,
+    .sd-sale-page .sd-inclusions-layout,
+    .sd-sale-page .sd-enquiry-layout {
+        gap: 35px;
+    }
+
+    .sd-sale-page .sd-opportunity-note {
+        gap: 10px;
+        margin-top: 23px;
+        padding: 15px;
+    }
+
+    .sd-sale-page .sd-opportunity-note p {
+        font-size: 11px;
+    }
+
+    .sd-sale-page .sd-benefit-item {
+        grid-template-columns: 39px minmax(0, 1fr);
+        gap: 12px;
+        padding: 22px 0;
+    }
+
+    .sd-sale-page .sd-benefit-number {
+        width: 37px;
+        height: 37px;
+        font-size: 14px;
+    }
+
+    .sd-sale-page .sd-benefit-content h3 {
+        font-size: 19px;
+    }
+
+    .sd-sale-page .sd-benefit-content p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .sd-sale-page .sd-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 11px;
+    }
+
+    .sd-sale-page .sd-category-card {
+        min-height: 220px;
+        padding: 19px 15px;
+        border-radius: 12px;
+    }
+
+    .sd-sale-page .sd-category-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 20px;
+        border-radius: 11px;
+        font-size: 19px;
+    }
+
+    .sd-sale-page .sd-category-card h3 {
+        font-size: 17px;
+        line-height: 1.35;
+    }
+
+    .sd-sale-page .sd-category-card p {
+        margin-top: 8px;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .sd-sale-page .sd-category-footnote {
+        margin-top: 22px;
+        font-size: 10px;
+    }
+
+    .sd-sale-page .sd-inclusions-list {
+        grid-template-columns: 1fr;
+        gap: 9px;
+        margin-top: 24px;
+    }
+
+    .sd-sale-page .sd-inclusion-item {
+        padding: 13px;
+    }
+
+    .sd-sale-page .sd-inclusions-visual {
+        padding: 26px 22px;
+        border-radius: 23px;
+    }
+
+    .sd-sale-page .sd-inclusions-visual::before {
+        inset: 9px;
+        border-radius: 17px;
+    }
+
+    .sd-sale-page .sd-visual-domain {
+        font-size: clamp(28px, 8vw, 36px);
+        letter-spacing: -0.8px;
+    }
+
+    .sd-sale-page .sd-transfer-card {
+        padding: 22px;
+    }
+
+    .sd-sale-page .sd-transfer-card h3 {
+        font-size: 20px;
+    }
+
+    .sd-sale-page .sd-enquiry-card {
+        padding: 25px 19px;
+        border-radius: 15px;
+    }
+
+    .sd-sale-page .sd-enquiry-card h3 {
+        font-size: 25px;
+    }
+
+    .sd-sale-page .sd-contact-method {
+        gap: 11px;
+        padding: 12px;
+    }
+
+    .sd-sale-page .sd-contact-icon {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+        font-size: 16px;
+    }
+
+    .sd-sale-page .sd-contact-method-copy strong {
+        font-size: 11px;
+    }
+
+    .sd-sale-page .sd-final-cta {
+        padding: 48px 0;
+    }
+
+    .sd-sale-page .sd-final-cta-inner {
+        gap: 22px;
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    .sd-sale-page .sd-final-cta-copy h2 {
+        font-size: 29px;
+    }
+
+    .sd-sale-page .sd-final-cta-copy p {
+        font-size: 12px;
+    }
+
+    .sd-sale-page .sd-final-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+
+/* =========================
+   18. SMALL MOBILE — 360px
+========================= */
+
+@media (max-width: 360px) {
+
+    .sd-sale-page .sd-container {
+        width: calc(100% - 28px);
+    }
+
+    .sd-sale-page .sd-hero-title {
+        font-size: 35px;
+    }
+
+    .sd-sale-page .sd-hero-badge {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .sd-sale-page .sd-domain-art {
+        min-height: 270px;
+    }
+
+    .sd-sale-page .sd-art-orbit {
+        width: 235px;
+    }
+
+    .sd-sale-page .sd-domain-card {
+        width: 92%;
+        padding: 22px 16px;
+    }
+
+    .sd-sale-page .sd-card-domain {
+        font-size: 24px;
+    }
+
+    .sd-sale-page .sd-floating-label {
+        padding: 8px;
+        font-size: 7px;
+    }
+
+    .sd-sale-page .sd-category-grid {
+        gap: 8px;
+    }
+
+    .sd-sale-page .sd-category-card {
+        min-height: 215px;
+        padding: 15px 12px;
+    }
+
+    .sd-sale-page .sd-category-card h3 {
+        font-size: 16px;
+    }
+
+    .sd-sale-page .sd-category-card p {
+        font-size: 10px;
+    }
+
+    .sd-sale-page .sd-inclusions-visual {
+        padding: 23px 17px;
+    }
+
+    .sd-sale-page .sd-enquiry-card {
+        padding: 22px 15px;
+    }
+
+    .sd-sale-page .sd-contact-method {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .sd-sale-page .sd-contact-method-copy strong {
+        font-size: 10px;
+    }
+}
+
+
+/* =========================
+   19. ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sd-sale-page *,
+    .sd-sale-page *::before,
+    .sd-sale-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .sd-sale-page.sd-reveal-ready .sd-reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* =========================
+   20. PRINT
+========================= */
+
+@media print {
+
+    .sd-sale-page {
+        color: #000000;
+        background: #FFFFFF;
+    }
+
+    .sd-sale-page .sd-sale-hero,
+    .sd-sale-page .sd-enquiry-section {
+        color: #000000;
+        background: #FFFFFF;
+    }
+
+    .sd-sale-page .sd-hero-title,
+    .sd-sale-page .sd-enquiry-copy .sd-section-title {
+        color: #173D2B;
+    }
+
+    .sd-sale-page .sd-hero-description,
+    .sd-sale-page .sd-enquiry-copy .sd-section-description {
+        color: #333333;
+    }
+
+    .sd-sale-page .sd-floating-label,
+    .sd-sale-page .sd-hero-actions {
+        display: none;
+    }
+
+    .sd-sale-page.sd-reveal-ready .sd-reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
